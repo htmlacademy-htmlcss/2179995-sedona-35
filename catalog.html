@@ -7,8 +7,8 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="page-header-logo" src="images/logo.svg" alt="Логотип" width="140" height="70" />
       <nav class="navigation">
+        <img class="page-header-logo" src="images/logo.svg" alt="Логотип" width="140" height="70" />
         <ul class="navigation-list">
           <li class="navigation-item">
             <a href="index.html" class="navigation-link">Главная</a>
@@ -20,13 +20,12 @@
             <a href="catalog.html" class="navigation-link">Гостиницы</a>
           </li>
         </ul>
-
-        <ul class="navigation-user">
+        <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a href="#" class="navigation-link"><span class="visually-hidden">Поиск</span></a>
+            <a href="#" class="navigation-link navigation-search"><span class="visually-hidden">Поиск</span></a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link"><span class="visually-hidden">Избранное</span></a>
+            <a href="#" class="navigation-link navigation-favourites"><span class="visually-hidden">Избранное</span></a>
           </li>
           <li class="navigation-item">
             <a href="#" class="navigation-link-here button">Хочу сюда!</a>
@@ -36,9 +35,10 @@
     </header>
 
     <main class="main-inner">
-      <div class="container-filter">
+      <div class="filter-container">
         <header class="inner-header">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
+
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a href="index.html" class="breadcrumbs-link"><span class="visually-hidden">Главная</span></a>
@@ -102,35 +102,41 @@
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <label for="range">
                 <input class="price" type="text" value="0" placeholder="от" name="price-from" />
-                <input class="price" type="text" value="9000" placeholder="до" name="price-to" />
-                <input class="price-range" type="range" id="range" min="0" max="9000" step="100" value="6000" name="price-range" />
+                <input class="price" type="text" value="" placeholder="до" name="price-to" />
+                <!-- <input class="price-range" type="range" id="range" min="0" max="9000" step="100" value="6000" name="price-range" /> -->
               </label>
             </fieldset>
-            <button class="button btn-blue" type="submit">Применить</button>
-            <button class="button" type="reset">Сбросить</button>
+            <div class="button-container">
+              <button class="button button-apply" type="submit">Применить</button>
+              <button class="button button-reset" type="reset">Сбросить</button>
+            </div>
           </form>
         </section>
       </div>
 
       <section class="sorting">
         <h2 class="visually-hidden">Сортировка</h2>
-        <h3 class="sorting-found">Найдено гостиниц:<span> 38</span></h3>
-        <select name="sorting">
-          <option value="popular">Сначала популярные</option>
-          <option value="cheap">Сначала дешевые</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
-        <ul class="view">
-          <li class="view-icon"><img src="#" alt="tile" class="icon" /></li>
-          <li class="view-icon">
-            <img src="#" alt="slideshow" class="icon" />
-          </li>
-          <li class="view-icon"><img src="#" alt="list" class="icon" /></li>
-        </ul>
+        <div class="sorting-container">
+          <h3 class="sorting-found">Найдено гостиниц:<span> 38</span></h3>
+          <select name="sorting">
+            <option value="popular">Сначала популярные</option>
+            <option value="cheap">Сначала дешевые</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+          <ul class="view">
+            <li class="view-icon"><img src="#" alt="tile" class="icon" /></li>
+            <li class="view-icon">
+              <img src="#" alt="slideshow" class="icon" />
+            </li>
+            <li class="view-icon"><img src="#" alt="list" class="icon" /></li>
+          </ul>
+        </div>
 
         <ul class="product-list">
           <li class="product-card">
-            <a class="product-card-link" href="#"><img class="product-card-image" src="images/catalog/hotel-1.jpg" alt="Amara Resort & Spa" width="300" height="212" /></a>
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="images/catalog/hotel-1.jpg" alt="Amara Resort & Spa" width="300" height="212" />
+            </a>
             <a class="product-card-title-link" href="#">
               <h3 class="product-card-title">Amara Resort & Spa</h3>
             </a>
@@ -138,8 +144,11 @@
             <span class="product-card-price">От 4000 ₽</span>
             <a href="#" class="button product-card-detail">подробнее</a>
             <button class="button product-card-favourites">в избранное</button>
-            <p class="rating-stars"><span class="visually-hidden">4 звезды</span></p>
-            <img class="product-card-rating-stars" src="#" alt="Звёзды" />
+            <p class="rating-stars">
+              <span class="visually-hidden">4 звезды</span>
+              <img class="product-card-rating-stars" src="#" alt="Звёзды" />
+            </p>
+
             <a class="button" href="#"><span class="rating">Рейтинг: 8,5</span></a>
           </li>
 
@@ -152,8 +161,11 @@
             <span class="product-card-price">От 5000 ₽</span>
             <a href="#" class="button product-card-detail">подробнее</a>
             <button class="button product-card-favourites-green">в избранное</button>
-            <p class="rating-stars"><span class="visually-hidden">4 звезды</span></p>
-            <img class="product-card-rating-stars" src="#" alt="Звёзды" />
+            <p class="rating-stars">
+              <span class="visually-hidden">4 звезды</span>
+              <img class="product-card-rating-stars" src="#" alt="Звёзды" />
+            </p>
+
             <a class="button" href="#"><span class="rating">Рейтинг: 9,2</span></a>
           </li>
 
@@ -166,8 +178,8 @@
             <span class="product-card-price">От 2500 ₽</span>
             <a href="#" class="button product-card-detail">подробнее</a>
             <button class="button product-card-favourites">в избранное</button>
-            <p class="rating-stars"><span class="visually-hidden">3 звезды</span></p>
-            <img class="product-card-rating-stars" src="#" alt="Звёзды" />
+            <p class="rating-stars"><span class="visually-hidden">3 звезды</span><img class="product-card-rating-stars" src="#" alt="Звёзды" /></p>
+
             <a class="button" href="#"><span class="rating">Рейтинг: 6,9</span></a>
           </li>
 
@@ -180,13 +192,13 @@
             <span class="product-card-price">От 1500 ₽</span>
             <a href="#" class="button product-card-detail">подробнее</a>
             <button class="button product-card-favourites">в избранное</button>
-            <p class="rating-stars"><span class="visually-hidden">2 звезды</span></p>
-            <img class="product-card-rating-stars" src="#" alt="Звёзды" />
+            <p class="rating-stars"><span class="visually-hidden">2 звезды</span><img class="product-card-rating-stars" src="#" alt="Звёзды" /></p>
+
             <a class="button" href="#"><span class="rating">Рейтинг: 5,0</span></a>
           </li>
         </ul>
         <ul class="pagination">
-          <li class="pagination-item">
+          <li class="pagination-item pagination-current">
             <a href="#" class="pagination-link pagination-current">1</a>
           </li>
           <li class="pagination-item">
@@ -198,8 +210,8 @@
           <li class="pagination-item">
             <a href="#" class="pagination-link">4</a>
           </li>
-          <li class="pagination-item">
-            <a href="#" class="pagination-link">...</a>
+          <li class="pagination-item pagination-ellipsis">
+            <a href="#" class="pagination-link pagination-ellipsis">...</a>
           </li>
           <li class="pagination-item">
             <a href="#" class="pagination-link">10</a>
@@ -208,43 +220,47 @@
       </section>
 
       <section class="subscribe-catalog">
-        <h2 class="visually-hidden">Подписка</h2>
-        <h3 class="subscribe-catalog-title">Подпишитесь на рассылку</h3>
-        <p class="subscribe-catalog-description">
-          Только полезная информация и никакого спама,<br />
-          честное бойскаутское!
-        </p>
-        <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="newsletter-email"></label>
-          <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required />
-          <button class="button newsletter-button" type="submit">
-            <span>Подписаться</span>
-          </button>
-        </form>
+        <div class="subscribe-container">
+          <h2 class="visually-hidden">Подписка</h2>
+          <h3 class="subscribe-catalog-title">Подпишитесь на рассылку</h3>
+          <p class="subscribe-catalog-description">
+            Только полезная информация и никакого спама,<br />
+            честное бойскаутское!
+          </p>
+        </div>
+        <div class="newsletter-container">
+          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="newsletter-email"></label>
+            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required />
+            <button class="button newsletter-button" type="submit">
+              <span>Подписаться</span>
+            </button>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <h2 class="visually-hidden">Контакты</h2>
-      <ul class="footer-social">
-        <li class="footer-social-item">
-          <a class="footer-social-link-vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Vkontakte</span></a>
-        </li>
-        <li class="footer-social-item">
-          <a class="footer-social-link-telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Telegram</span></a>
-        </li>
-        <li class="footer-social-item">
-          <a class="footer-social-link-youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Youtube</span></a>
-        </li>
-      </ul>
-
-      <address class="footer-contacts-address">
-        <a class="footer-contacts-address-phone" href="tel:78128121212">+7 (812) 812-12-12</a>
-      </address>
-
-      <a class="footer-contacts-logo" href="https://htmlacademy.ru/">
-        <img src="images/HTML-Academy.svg" alt="Логотип htmlacademy" class="footer-contacts-logo-htmlacademy" width="114.9" height="32.9" />
-      </a>
+      <div class="footer-container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <ul class="footer-social">
+          <li class="footer-social-item">
+            <a class="footer-social-link-vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Vkontakte</span></a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link-telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Telegram</span></a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link-youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Youtube</span></a>
+          </li>
+        </ul>
+        <address class="footer-contacts-address">
+          <a class="footer-contacts-address-phone" href="tel:78128121212">+7 (812) 812-12-12</a>
+        </address>
+        <a class="footer-contacts-logo" href="https://htmlacademy.ru/">
+          <img src="images/HTML-Academy.svg" alt="Логотип htmlacademy" class="footer-contacts-logo-htmlacademy" width="114.9" height="32.9" />
+        </a>
+      </div>
     </footer>
   </body>
 </html>
