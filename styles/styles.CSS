@@ -70,13 +70,14 @@ body {
 .navigation-wrapper-list {
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
-  padding-left: 70px;
+  position: relative;
+  margin-left: 238px;
 }
 
 .navigation-logo {
+  position: absolute;
   max-width: 140px;
-  margin-right: 28px;
+  padding-left: 70px;
 }
 
 .navigation-list {
