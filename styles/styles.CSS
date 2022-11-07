@@ -96,17 +96,25 @@ body {
   color: #000000;
   text-decoration: none;
 }
+
 .navigation-user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   width: 400px;
   margin-left: auto;
   padding-right: 70px;
 }
+
 .navigation-user .navigation-link {
   min-width: 20px;
   min-height: 20px;
 }
-
 .navigation-here {
+  padding: 0;
+}
+.button-here {
+  display: block;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -130,11 +138,20 @@ body {
   background-image: url(../images/index-background.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
+  position: relative;
 }
+
 .hero-welcome {
   display: block;
   margin: 0 auto;
   padding: 51px 371px 82px;
+}
+.hero-divider-saw {
+  width: 1200px;
+  height: 57px;
+  background: url(../images/saw.png) no-repeat;
+  position: absolute;
+  top: 428px;
 }
 
 .hero-title {
@@ -624,7 +641,7 @@ select {
 }
 .product-card-image {
   display: block;
-  text-align: center;
+  text-align: start;
 }
 .product-card-title {
   margin: 0;
@@ -646,6 +663,7 @@ select {
   line-height: 21px;
   color: #333333;
   grid-column: 1 / 2;
+  display: grid;
 }
 .product-card-price {
   font-weight: 400;
