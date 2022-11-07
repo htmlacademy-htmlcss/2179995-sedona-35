@@ -15,7 +15,6 @@
 }
 html {
   height: 100%;
-  background-color: #e5e5e5;
 }
 
 body {
@@ -23,26 +22,22 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  /* background-color: #ffffff; */
   color: #000000;
-  width: 1280px;
-  background-color: #f2f2f2;
 }
 .body-wrapper {
   min-height: 100%;
   margin: 0 auto;
-  width: 1200px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: #ffffff;
   flex-grow: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 .button {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -150,23 +145,18 @@ body {
 }
 .hero-background {
   margin: 0 auto;
-  background-image: url(../images/index-background.jpg);
+  background-image: url(../images/saw.png), url(../images/index-background.jpg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  position: relative;
+  background-size: 100% auto, 100% auto;
+  background-position: 0 100%;
+  width: 1200px;
+  min-height: 485px;
 }
 
 .hero-welcome {
   display: block;
   margin: 0 auto;
   padding: 51px 371px 82px;
-}
-.hero-divider-saw {
-  width: 1200px;
-  height: 57px;
-  background: url(../images/saw.png) no-repeat;
-  position: absolute;
-  top: 429px;
 }
 
 .hero-title {
@@ -205,6 +195,7 @@ body {
 }
 
 .advantages-title {
+  position: relative;
   margin: 0;
   margin-left: 27.5px;
   margin-right: 27.5px;
@@ -216,8 +207,29 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
+.advantages-title::before {
+  content: "";
+  position: absolute;
+
+  top: 86px;
+  left: 55px;
+  width: 60px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.white-rectangle::before {
+  content: "";
+  position: absolute;
+
+  top: 86px;
+  left: 55px;
+  width: 60px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
 .advantages-description {
   margin: 0;
+  margin-top: 30px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -251,12 +263,7 @@ body {
   flex-direction: column;
   padding: 80px 85px 81px;
 }
-.rectangle {
-  width: 60px;
-  height: 2px;
-  background: rgba(0, 0, 0, 0.3);
-  margin-bottom: 30px;
-}
+
 .advantages-container-image {
   display: flex;
   margin: 0;
@@ -265,14 +272,13 @@ body {
 .advantages-container-image-bridge {
   display: flex;
   order: -1;
-
-  /* align-self: stretch;  */
 }
 
 .advantages-item:nth-child(4n + 1) {
   color: #ffffff;
   background-color: #82b3d3;
 }
+
 .advantages-item:nth-child(2n) {
   background-color: rgba(131, 179, 211, 0.12);
 }
@@ -341,14 +347,14 @@ body {
   margin: 0 0 20px;
 }
 .subscribe-description {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
   color: #ffffff;
-  margin: 0;
+
   margin: 0 0 54px;
 }
 .field {
@@ -359,7 +365,7 @@ body {
   background-color: #f2f2f2;
 }
 .field::placeholder {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -387,7 +393,7 @@ body {
 .newsletter-button {
   padding: 8px 50px;
   color: #ffffff;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -427,7 +433,7 @@ body {
   margin-bottom: 26.33px;
 }
 .footer-contacts-address-phone {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -598,7 +604,7 @@ input[type="text"] {
 }
 
 .sorting-found {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -609,7 +615,7 @@ input[type="text"] {
 }
 
 select {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -661,7 +667,7 @@ select {
 }
 .product-card-title {
   margin: 0;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -713,7 +719,7 @@ select {
   min-width: 95px;
   /* margin: 0; */
   padding: 9px 22px 8px 23px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -773,7 +779,7 @@ select {
   flex-direction: column;
 }
 .subscribe-catalog-title {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -785,7 +791,7 @@ select {
   margin-bottom: 20px;
 }
 .subscribe-catalog-description {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
