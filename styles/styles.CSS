@@ -15,20 +15,32 @@
 }
 html {
   height: 100%;
+  background-color: #e5e5e5;
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   min-height: 100%;
   font-family: "PT Sans";
   font-size: 18px;
   line-height: 21px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   color: #000000;
+  width: 1280px;
+  background-color: #f2f2f2;
 }
-
+.body-wrapper {
+  min-height: 100%;
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  flex-grow: 1;
+}
 .button {
   font-family: "PT Sans";
   font-style: normal;
@@ -54,6 +66,8 @@ body {
   overflow: hidden;
 }
 .page-header {
+  margin: 0 auto;
+  width: 1200px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -65,12 +79,10 @@ body {
   max-width: 1200px;
   min-height: 64px;
   margin: 0 auto;
-  position: relative;
 }
 .navigation-wrapper-list {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
   margin-left: 238px;
 }
 
@@ -78,12 +90,13 @@ body {
   position: absolute;
   max-width: 140px;
   padding-left: 70px;
+  z-index: 1;
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
   max-width: 600px; /* +93px, если вдруг появится ещё пункт навигации, как описано в скринкасте 5.15 */
@@ -127,11 +140,13 @@ body {
 
 .main-container {
   flex-grow: 1;
+  flex: 1 1 auto;
 }
 
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 .hero-background {
   margin: 0 auto;
@@ -151,7 +166,7 @@ body {
   height: 57px;
   background: url(../images/saw.png) no-repeat;
   position: absolute;
-  top: 428px;
+  top: 429px;
 }
 
 .hero-title {
@@ -425,6 +440,7 @@ body {
 .main-inner {
   width: 1200px;
   margin: 0 auto;
+  background-color: #fff;
 }
 .filter-container {
   display: flex;
