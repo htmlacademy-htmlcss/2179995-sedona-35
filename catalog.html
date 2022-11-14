@@ -8,9 +8,13 @@
   </head>
   <body>
     <div class="body-wrapper">
+      <!-- Шапка -->
       <header class="page-header">
+        <!-- Навигация -->
         <nav class="navigation">
+          <!-- Лого -->
           <img class="navigation-logo" src="images/logo.svg" alt="Логотип" width="140" height="70" />
+
           <div class="navigation-wrapper-list">
             <ul class="navigation-list">
               <li class="navigation-item">
@@ -50,10 +54,13 @@
           </ul>
         </nav>
       </header>
+
       <main class="main-container main-inner">
         <div class="filter-container">
           <header class="inner-header">
+            <!-- Главный заголовок -->
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
+            <!-- Хлебные крошки -->
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
                 <a href="index.html" class="breadcrumbs-link">
@@ -69,9 +76,11 @@
               </li>
             </ul>
           </header>
+          <!-- Фильтр гостиниц -->
           <section class="catalog-filter-hotels">
             <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+              <!-- Инфраструктура -->
               <div class="filter-group-infra">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -100,6 +109,7 @@
                   </ul>
                 </fieldset>
               </div>
+              <!-- Тип жилья -->
               <div class="filter-group-housing">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Тип жилья:</legend>
@@ -128,15 +138,19 @@
                   </ul>
                 </fieldset>
               </div>
-
+              <!-- Прайс -->
               <div class="filter-group-price">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
 
                   <div class="range">
                     <div class="range-wrapper-inputs">
-                      <label class="catalog-filter-label"><input class="range-input input-right" type="number" value="0" name="min-price" style="width: 143px" /></label>
-                      <label class="catalog-filter-label"><input class="range-input input-left" type="number" value="9000" name="max-price" style="width: 143px" /> </label>
+                      <label class="catalog-filter-label"
+                        ><input class="range-input input-right" type="number" value="0" name="min-price" style="width: 143px" /><span class="label-placeholder">от</span></label
+                      >
+                      <label class="catalog-filter-label"
+                        ><input class="range-input input-left" type="number" value="9000" name="max-price" style="width: 143px" /><span class="label-placeholder">до</span></label
+                      >
                     </div>
                     <div class="range-scale">
                       <div class="range-bar" style="left: 6px; width: 226px">
@@ -158,6 +172,7 @@
             </form>
           </section>
         </div>
+        <!-- Отсортированные гостиницы -->
         <section class="sorting-catalog">
           <div class="sorting-container">
             <h2 class="visually-hidden">Сортировка</h2>
@@ -196,6 +211,7 @@
               </li>
             </ul>
           </div>
+          <!-- Карточки гостиниц -->
           <ul class="product-list">
             <li class="product-card">
               <a class="product-card-link" href="#">
@@ -257,6 +273,7 @@
               <span class="rating">Рейтинг: 5,0</span>
             </li>
           </ul>
+          <!-- Пагинация -->
 
           <ul class="pagination">
             <li class="pagination-item pagination-current">
@@ -279,6 +296,7 @@
             </li>
           </ul>
         </section>
+        <!-- Подписка -->
         <section class="subscribe-catalog">
           <div class="subscribe-container">
             <h2 class="visually-hidden">Подписка</h2>
@@ -299,9 +317,11 @@
           </div>
         </section>
       </main>
+      <!-- Подвал -->
       <footer class="page-footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Контакты</h2>
+          <!-- Социальные сети -->
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="footer-social-link-vkontakte" href="https://vk.com/htmlacademy">
@@ -333,6 +353,7 @@
               </a>
             </li>
           </ul>
+          <!-- Контакты -->
           <address class="footer-contacts-address">
             <a class="footer-contacts-address-phone" href="tel:78128121212">+7 (812) 812-12-12</a>
           </address>
